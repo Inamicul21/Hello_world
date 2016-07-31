@@ -1,6 +1,9 @@
 /*
   I am happy to meet you! :)
+  Simple C program here!
   */
+  #include <stdlib.h>
+  
   void hello()
   {
   printf("Hello again my dear friends!);
