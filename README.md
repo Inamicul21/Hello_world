@@ -1,8 +1,12 @@
 /*
   I am happy to meet you! :)
   */
+  void hello()
+  {
+  printf("Hello again my dear friends!);
+  }
   
-  life_is_hard(int x)
+  void life_is_hard(int x)
   {
   int i;
   for (i = 0; i < x; i++)
@@ -14,9 +18,12 @@
   
   int main()
   {
-  int x;
+  int a;
   printf("Hello World");
-  printf("Introdu x: "); scanf("%d",&x}
+  printf("Introdu a: "); 
+  scanf("%d",&a);
+  life_is_hard(a);
+  hello();
   return 0;
   }
   
