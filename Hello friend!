@@ -1,0 +1,73 @@
+/*
+Bogdan
+C chior, ex din lab-urile de PC 
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void conversie()
+{
+
+}
+
+
+void numere()
+{
+    int a,b,suma,produs,a1,b1;
+
+    printf("Introduceti nr a: "); scanf("%d",&a);
+    printf("Introduceti nr b: "); scanf("%d",&b);
+
+    a1 = 100 - a;
+    b1 = 100 - b;
+
+    suma = 100 - (a1 + b1);
+
+    produs = a1 * b1;
+
+    printf("Produsul nr introduse este: %d%d",suma,produs);
+}
+
+
+int main()
+{
+    //FILE *f;
+    int choice;
+    char cauta[20];
+/*
+    if ((f = fopen("angajat.txt","r+")) == NULL)
+    {
+        printf("Fisierul nu a putut fi deschis!");
+        exit(1);
+    }
+*/
+    do
+    {
+        printf(">>>>>MENIU<<<<<\n\n");
+        printf("1.Fahrenheit and Celsius!\n");
+        printf("2.Multiply large numbers!\n");
+        printf("3.Multiply by 11!\n");
+        printf("4.Iesire\n");
+        scanf("%d", &choice);
+        switch(choice)
+        {
+        case 1:
+            conversie();
+            break;
+        case 2:
+            numere();
+            break;
+        case 3:
+            //afisare_angajati(f);
+            break;
+        case 4: printf("La revedere!\n");
+        break;
+
+        default: printf("Ai ales gresit! Incearca iarasi!\n");
+        break;
+        }
+    }   while (choice != 4);
+
+    return 0;
+}
