@@ -1,24 +1,46 @@
 /*
 Bogdan
-C chior, ex din lab-urile de PC 
-*/
+C chior, ex din lab-urile de PC
 
+<!-- Enjoy the menu and behold the secret! -->
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
 void conversie()
 {
+    printf("Hello friend!\n");
+    printf("This program has bugs i know!\n");
 
+
+}
+
+void multiplicare() {
+
+    int i;
+    int suma;
+    printf("Tabla multiplicarii cu 11\n");
+    for (i = 1; i < 12; i++) {
+            suma = i * 11;
+        printf(" %d\n",suma);
+    }
+}
+
+void secret() {
+    long int p;
+    p = 111111111*111111111;
+    printf("9 biti pe lume, toti veseli :))\n");
+    printf("%d\n",p);
 }
 
 
 void numere()
 {
-    int a,b,suma,produs,a1,b1;
-
+    int a,b;
+    int suma,produs,a1,b1;
     printf("Introduceti nr a: "); scanf("%d",&a);
     printf("Introduceti nr b: "); scanf("%d",&b);
-
+/*
     a1 = 100 - a;
     b1 = 100 - b;
 
@@ -27,6 +49,12 @@ void numere()
     produs = a1 * b1;
 
     printf("Produsul nr introduse este: %d%d",suma,produs);
+    */
+
+    if (a > b)
+        printf("a este mumarul mai mare!\n");
+    else
+        printf("b este numarul mai mare!\n");
 }
 
 
@@ -44,11 +72,12 @@ int main()
 */
     do
     {
-        printf(">>>>>MENIU<<<<<\n\n");
-        printf("1.Fahrenheit and Celsius!\n");
-        printf("2.Multiply large numbers!\n");
+        printf("        >>>>>MENIU<<<<<\n\n");
+        printf("1.Hello friend\n");
+        printf("2.Compare two numbers!\n");
         printf("3.Multiply by 11!\n");
-        printf("4.Iesire\n");
+        printf("4.Secret!\n");
+        printf("5.Exit\n");
         scanf("%d", &choice);
         switch(choice)
         {
@@ -59,15 +88,19 @@ int main()
             numere();
             break;
         case 3:
-            //afisare_angajati(f);
+            multiplicare();
             break;
-        case 4: printf("La revedere!\n");
-        break;
+        case 4:
+            secret();
+            break;
+        case 5:
+            printf("Goodbye!\n");
+            break;
 
-        default: printf("Ai ales gresit! Incearca iarasi!\n");
+        default: printf("Invalid choice!\n");
         break;
         }
-    }   while (choice != 4);
+    }   while (choice != 5);
 
     return 0;
 }
