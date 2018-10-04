@@ -1,4 +1,4 @@
-# Florea Bogdan 30.09.2016
+# FeBe 30.09.2016
 
 #importare librarii
 import sys
